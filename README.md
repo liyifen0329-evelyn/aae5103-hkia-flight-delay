@@ -5,7 +5,7 @@ Analysis of aircraft departure records from Hong Kong International Airport (HKI
 
 ## What the script does
 
-1. Reads the 18 daily departure CSV files and merges them into one table (4,687 rows).
+1. Reads the 18 daily departure CSV files (1–18 June 2023) and merges them into one table (4,687 records).
 2. Computes `delay_min = actual departure time - scheduled departure time`.
 3. Q1 – delay rate and average delay per airline (delay = actual - scheduled >= 30 min).
 4. Q2 – number of delayed flights by hour of the day -> `q2_delayed_by_hour.png`.
@@ -19,6 +19,12 @@ python3 my_work.py
 ```
 
 Run it from the folder that contains `flight_data/`.
+
+## Data scope
+
+- Source: HKIA departure records, 112 daily files covering 27 Feb – 18 Jun 2023 (26,672 records in total).
+- This analysis uses the 18 days of 1–18 June 2023 only — 4,687 records before any filtering.
+- Headline tables below cover Cathay Pacific (CX), HK Express (UO) and Hong Kong Airlines (HX).
 
 ## Data notes (why the numbers look the way they do)
 
